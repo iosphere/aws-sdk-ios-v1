@@ -30,7 +30,7 @@
 extern NSString *const AWSClockSkewError;
 
 @interface AmazonServiceResponse:NSObject {
-    int32_t            httpStatusCode;
+    NSInteger            httpStatusCode;
     NSString             *requestId;
     NSMutableData        *body;
     NSDictionary         *responseHeader;
@@ -53,7 +53,7 @@ extern NSString *const AWSClockSkewError;
 @property (nonatomic, readonly) NSDictionary *responseHeader;
 
 /** The HTTP status code of the response from the service. */
-@property (nonatomic) int32_t httpStatusCode;
+@property (nonatomic) NSInteger httpStatusCode;
 
 /** Whether the response is finished loading. */
 @property (nonatomic, readonly) BOOL isFinishedLoading;
